@@ -4,7 +4,10 @@
  */
 package com.betahouse.servicezuul.core.shiro;
 
+import com.betahouse.servicezuul.common.logger.LoggerUtil;
 import org.apache.commons.lang.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.apache.shiro.web.util.WebUtils;
 
@@ -20,11 +23,14 @@ public class AccessTokenSessionManager extends DefaultWebSessionManager {
 
     private static final String AUTHORIZATION = "Authorization";
 
+    private static final Logger LOGGER = LogManager.getLogger(AccessTokenSessionManager.class);
+
     @Override
     protected Serializable getSessionId(ServletRequest request, ServletResponse response) {
         // 从 header 里面抽出 token
         String token = WebUtils.toHttp(request).getHeader(AUTHORIZATION);
         if (StringUtils.isNotBlank(token)) {
+            LoggerUtil.info(LOGGER, "获取token, token={0}, request={1}, response={2}", token, request, response);
             return token;
         }
         // 取不出 token 按照原逻辑取
