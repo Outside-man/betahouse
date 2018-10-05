@@ -16,8 +16,8 @@ import javax.servlet.ServletResponse;
 import java.io.Serializable;
 
 /**
- * @author tuanz
- * @version : AccessTokenSessionManager.java 2018/10/04 下午10:59 tuanz
+ * @author dango.yxm
+ * @version : AccessTokenSessionManager.java 2018/10/04 下午10:59 dango.yxm
  */
 public class AccessTokenSessionManager extends DefaultWebSessionManager {
 

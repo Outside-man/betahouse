@@ -11,8 +11,8 @@ import java.lang.reflect.Method;
 import java.text.MessageFormat;
 
 /**
- * @author tuanz
- * @version : LoggerUtil.java 2018/10/04 下午11:38 tuanz
+ * @author dango.yxm
+ * @version : LoggerUtil.java 2018/10/04 下午11:38 dango.yxm
  */
 public class LoggerUtil {
 

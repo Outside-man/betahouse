@@ -13,8 +13,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 
 /**
  * 登陆规则
- * @author tuanz
- * @version : LoginRealm.java 2018/10/04 下午11:17 tuanz
+ * @author dango.yxm
+ * @version : LoginRealm.java 2018/10/04 下午11:17 dango.yxm
  */
 public class LoginRealm extends AuthorizingRealm {
 

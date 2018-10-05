@@ -88,4 +88,6 @@ hs_err_pid*
 ### Other
 .idea/
 logs/
+*/**/*.iml
+*/**/*.log
 

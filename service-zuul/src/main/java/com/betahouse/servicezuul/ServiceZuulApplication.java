@@ -21,8 +21,5 @@ public class ServiceZuulApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceZuulApplication.class, args);
-        LOGGER.error("aaaaa");
-        LOGGER.info("bbbbbb");
-
     }
 }

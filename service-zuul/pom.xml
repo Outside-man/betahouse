@@ -6,7 +6,11 @@
     <groupId>com.betahouse</groupId>
     <artifactId>service-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>src/main/java/com/betahouse/servicezuul/common/service/facade</module>
+        <module>src/main/java/com/betahouse/servicezuul/util</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>service-zuul</name>
     <description>betahouse gateway</description>
@@ -36,6 +40,18 @@
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--JPA-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
         <!--Druid-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -50,10 +66,30 @@
             <version>1.4.0</version>
         </dependency>
 
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!--子模块-->
+        <dependency>
+            <groupId>com.betahouse</groupId>
+            <artifactId>util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.betahouse</groupId>
+            <artifactId>service-zuul-facade</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
