@@ -5,7 +5,7 @@
 package com.betahouse.servicezuul.common.logger;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 
 import java.lang.reflect.Method;
 import java.text.MessageFormat;

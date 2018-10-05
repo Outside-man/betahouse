@@ -6,10 +6,10 @@ package com.betahouse.servicezuul.core.shiro;
 
 import com.betahouse.servicezuul.common.logger.LoggerUtil;
 import org.apache.commons.lang.StringUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.apache.shiro.web.util.WebUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -23,7 +23,7 @@ public class AccessTokenSessionManager extends DefaultWebSessionManager {
 
     private static final String AUTHORIZATION = "Authorization";
 
-    private static final Logger LOGGER = LogManager.getLogger(AccessTokenSessionManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccessTokenSessionManager.class);
 
     @Override
     protected Serializable getSessionId(ServletRequest request, ServletResponse response) {
