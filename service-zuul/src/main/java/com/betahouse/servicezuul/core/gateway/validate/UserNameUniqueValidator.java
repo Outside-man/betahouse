@@ -8,7 +8,7 @@ import com.betahouse.servicezuul.core.gateway.dao.model.UserDO;
 import com.betahouse.servicezuul.core.gateway.dao.repo.UserRepo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import request.UserRegisterRequest;
+import model.request.UserRegisterRequest;
 import utils.AssertUtil;
 import validator.Validator;
 

@@ -59,15 +59,11 @@
         </encoder>
     </appender>
 
-    <!-- 系统日志 -->
-    <appender name="ZUUL-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
+    <!--======================================模块日志======================================-->
+    <!-- biz日志 -->
+    <appender name="ZUUL-BIZ" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log_dir}/zuul/zuul-info.log
+            <fileNamePattern>${log_dir}/zuul/zuul-biz.log
             </fileNamePattern>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
@@ -85,9 +81,12 @@
         <appender-ref ref="SYS-INFO"/>
     </root>
 
-    <logger name="com.betahouse.servicezuul" level="info">
-        <appender-ref ref="ZUUL-INFO"/>
+    <logger name="com.betahouse.servicezuul.biz" level="info">
+        <!-- 控制台输出 -->
+        <appender-ref ref="STDOUT"/>
+        <!-- 文件输出 -->
         <appender-ref ref="COMMON-ERROR"/>
+        <appender-ref ref="ZUUL-BIZ"/>
     </logger>
 
 

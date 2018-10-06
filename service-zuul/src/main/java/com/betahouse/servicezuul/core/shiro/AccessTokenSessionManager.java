@@ -30,7 +30,7 @@ public class AccessTokenSessionManager extends DefaultWebSessionManager {
         // 从 header 里面抽出 token
         String token = WebUtils.toHttp(request).getHeader(AUTHORIZATION);
         if (StringUtils.isNotBlank(token)) {
-            LoggerUtil.info(LOGGER, "获取token, token={0}, request={1}, response={2}", token, request, response);
+            LoggerUtil.info(LOGGER, "获取token, token={0}, model.request={1}, response={2}", token, request, response);
             return token;
         }
         // 取不出 token 按照原逻辑取

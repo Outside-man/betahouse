@@ -4,6 +4,7 @@
  */
 package com.betahouse.servicezuul.common.logger;
 
+import exceptions.BetahouseException;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 
@@ -81,11 +82,12 @@ public class LoggerUtil {
      * @param params
      */
     public static void warn(Throwable throwable, Logger logger, String template, Object... params) {
-        String errorCode = null;
+        String errorCode;
         String errorMsg;
-        if (throwable instanceof Exception) {
-            Exception exception = (Exception) throwable;
-            errorMsg = exception.getMessage();
+        if (throwable instanceof BetahouseException) {
+            BetahouseException betahouseException = (BetahouseException) throwable;
+            errorCode = betahouseException.getErrorCode();
+            errorMsg = betahouseException.getErrorMsg();
         } else {
             errorCode = getErrorCode(throwable);
             errorMsg = errorCode;
@@ -100,7 +102,7 @@ public class LoggerUtil {
      * @param params
      * @return
      */
-    private static String getLogString(String template, Object params) {
+    private static String getLogString(String template, Object... params) {
         return MessageFormat.format(template, params);
     }
 

@@ -8,6 +8,8 @@ import com.betahouse.servicezuul.core.gateway.dao.model.UserDO;
 import com.betahouse.servicezuul.core.gateway.dao.repo.UserRepo;
 import com.betahouse.servicezuul.core.gateway.dao.service.UserService;
 import com.betahouse.servicezuul.core.gateway.model.UserBO;
+import com.betahouse.servicezuul.core.gateway.util.UserConverter;
+import com.betahouse.servicezuul.core.idfactory.BizIdFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utils.AssertUtil;
@@ -24,6 +26,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepo userRepo;
 
+    @Autowired
+    private BizIdFactory bizIdFactory;
+
     @Override
     public UserBO queryByUsername(String username) {
         return covert(userRepo.getByUsername(username));
@@ -32,6 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserBO insertUser(UserBO userBO) {
         UserDO userDO = covert(userBO);
+        userDO.setUserId(bizIdFactory.getUserId());
         AssertUtil.assertNotNull(userDO, "不能存储空用户实体");
         userRepo.save(userDO);
         return covert(userDO);
@@ -44,14 +50,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     private UserBO covert(UserDO userDO) {
-        if (userDO == null) {
-            return null;
-        }
-        UserBO userBO = new UserBO();
-        userBO.setUsername(userDO.getUsername());
-        userBO.setPassword(userDO.getPassword());
-        userBO.setSalt(userDO.getSalt());
-        return userBO;
+        return UserConverter.DO2BO(userDO);
     }
 
     /**
@@ -61,13 +60,6 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     private UserDO covert(UserBO userBO) {
-        if (userBO == null) {
-            return null;
-        }
-        UserDO userDO = new UserDO();
-        userDO.setUsername(userBO.getUsername());
-        userDO.setPassword(userBO.getPassword());
-        userDO.setSalt(userBO.getSalt());
-        return userDO;
+        return UserConverter.BO2DO(userBO);
     }
 }

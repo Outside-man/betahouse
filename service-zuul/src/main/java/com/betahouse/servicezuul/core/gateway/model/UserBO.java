@@ -17,6 +17,11 @@ public class UserBO extends ToString {
     private static final long serialVersionUID = 1747727186331072029L;
 
     /**
+     * 用户id
+     */
+    private String userId;
+
+    /**
      * 用户名
      */
     private String username;
@@ -30,6 +35,14 @@ public class UserBO extends ToString {
      * 盐
      */
     private String salt;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getUsername() {
         return username;

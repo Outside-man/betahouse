@@ -13,6 +13,8 @@ import enums.CommonResultCode;
  */
 public class BetahouseException extends RuntimeException {
 
+    private static final long serialVersionUID = -2372085495406352289L;
+
     /**
      * 异常码
      */
@@ -46,6 +48,22 @@ public class BetahouseException extends RuntimeException {
     public BetahouseException(Throwable cause, String errorCode, String errorMsg) {
         super(cause);
         this.errorCode = errorCode;
+        this.errorMsg = errorMsg;
+    }
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
     }
 }

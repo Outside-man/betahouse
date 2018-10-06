@@ -22,7 +22,13 @@ public enum CommonResultCode {
     /**
      * 参数异常
      */
-    ILLEGAL_PARAMETERS("参数异常");
+    ILLEGAL_PARAMETERS("参数异常"),
+
+    /**
+     * 调用成功
+     */
+    SUCCESS("调用成功")
+    ;
 
     private String errorMsg;
 

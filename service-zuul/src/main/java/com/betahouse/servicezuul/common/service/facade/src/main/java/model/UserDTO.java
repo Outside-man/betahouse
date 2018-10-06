@@ -2,25 +2,40 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package request;
+package model;
 
 import common.ToString;
 
 /**
- * 用户注册请求
- *
  * @author dango.yxm
- * @version : UserRegisterRequest.java 2018/10/05 下午11:06 dango.yxm
+ * @version : UserDTO.java 2018/10/06 下午2:01 dango.yxm
  */
-public class UserRegisterRequest extends ToString {
+public class UserDTO extends ToString {
 
-    private static final long serialVersionUID = -2696566376275061324L;
+    private static final long serialVersionUID = -3784510563032986166L;
 
-    // 用户名
+    /**
+     * 用户id
+     */
+    private String userId;
+
+    /**
+     * 账号
+     */
     private String username;
 
-    // 密码
+    /**
+     * 密码(密文)
+     */
     private String password;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getUsername() {
         return username;

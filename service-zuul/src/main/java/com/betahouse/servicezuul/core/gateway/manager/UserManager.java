@@ -5,7 +5,7 @@
 package com.betahouse.servicezuul.core.gateway.manager;
 
 import com.betahouse.servicezuul.core.gateway.model.UserBO;
-import request.UserRegisterRequest;
+import model.request.UserRegisterRequest;
 
 /**
  * 用户管理器

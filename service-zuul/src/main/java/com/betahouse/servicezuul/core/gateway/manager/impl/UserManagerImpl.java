@@ -9,7 +9,7 @@ import com.betahouse.servicezuul.core.gateway.manager.UserManager;
 import com.betahouse.servicezuul.core.gateway.model.UserBO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import request.UserRegisterRequest;
+import model.request.UserRegisterRequest;
 import validator.MultiValidator;
 
 /**

@@ -33,7 +33,10 @@ public class UserDO implements Serializable {
     @Column(name = "gmt_modified")
     private Long gmtModified;
 
-    @Column(name = "user_id")
+    /**
+     * userId 生成 不可修改
+     */
+    @Column(name = "user_id", updatable = false)
     private String userId;
 
     /**

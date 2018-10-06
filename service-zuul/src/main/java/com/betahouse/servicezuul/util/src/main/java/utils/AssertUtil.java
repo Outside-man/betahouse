@@ -6,6 +6,7 @@ package utils;
 
 import enums.CommonResultCode;
 import exceptions.BetahouseException;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * 断言工具
@@ -34,7 +35,7 @@ public class AssertUtil {
     }
 
     /**
-     * 断言对象不等于null
+     * 断言对象等于null
      *
      * @param obj
      * @param errorMsg
@@ -53,6 +54,30 @@ public class AssertUtil {
      */
     public static void assertNotNull(Object obj, String errorMsg) {
         if (obj == null) {
+            throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS.getErrorCode(), errorMsg);
+        }
+    }
+
+    /**
+     * 断言字符串不为空串
+     *
+     * @param str
+     * @param errorMsg
+     */
+    public static void assertStringNotBlank(String str, String errorMsg) {
+        if (StringUtils.isBlank(str)) {
+            throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS.getErrorCode(), errorMsg);
+        }
+    }
+
+    /**
+     * 断言字符串为空串
+     *
+     * @param str
+     * @param errorMsg
+     */
+    public static void assertStringBlank(String str, String errorMsg) {
+        if (StringUtils.isNotBlank(str)) {
             throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS.getErrorCode(), errorMsg);
         }
     }
