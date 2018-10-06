@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ImportResource;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication
-@ImportResource(locations = {"spring/*.xml"})
+@ImportResource(locations = {"classpath:spring/validator.xml"})
 public class ServiceZuulApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AccessTokenSessionManager.class);

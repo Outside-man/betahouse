@@ -23,6 +23,7 @@ public class UserManagerImpl implements UserManager {
     @Autowired
     private UserService userService;
 
+    @Autowired
     private MultiValidator userRegisterValidator;
 
     @Override
@@ -35,9 +36,5 @@ public class UserManagerImpl implements UserManager {
         userBO.setPassword(registerRequest.getPassword());
         userBO.setSalt("1");
         return userService.insertUser(userBO);
-    }
-
-    public void setUserRegisterValidator(MultiValidator userRegisterValidator) {
-        this.userRegisterValidator = userRegisterValidator;
     }
 }

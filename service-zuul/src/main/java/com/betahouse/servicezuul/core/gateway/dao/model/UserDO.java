@@ -19,6 +19,8 @@ import java.io.Serializable;
 @Table(name = "common_user")
 public class UserDO implements Serializable {
 
+    private static final long serialVersionUID = 1660907732049201911L;
+
     @Id
     @GeneratedValue
     private Long id;

@@ -10,7 +10,7 @@
         <module>src/main/java/com/betahouse/servicezuul/common/service/facade</module>
         <module>src/main/java/com/betahouse/servicezuul/util</module>
     </modules>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>service-zuul</name>
     <description>betahouse gateway</description>
