@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--用户名唯一校验器-->
+    <bean id="userNameUniqueValidator" class="com.betahouse.servicezuul.app.core.gateway.validate.UserNameUniqueValidator"/>
+
+    <!--用户注册校验器-->
+    <bean id="userRegisterValidator" class="validator.MultiValidator">
+        <property name="validatorList">
+            <list>
+                <ref bean="userNameUniqueValidator"/>
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -2,17 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>service-zuul-app</artifactId>
+        <groupId>com.betahouse</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../../../../../../../../pom.xml</relativePath>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.betahouse</groupId>
-    <artifactId>service-zuul</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>util</module>
-        <module>app</module>
-        <module>app/src/main/java/com/betahouse/servicezuul/app/common/service/facade</module>
-    </modules>
+    <artifactId>service-zuul-facade</artifactId>
 
 
 </project>
