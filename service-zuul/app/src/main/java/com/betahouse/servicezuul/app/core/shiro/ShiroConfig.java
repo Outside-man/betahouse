@@ -114,7 +114,7 @@ public class ShiroConfig {
      *
      * @return
      */
-    @ConfigurationProperties(prefix = "redis.shiro")
+    @ConfigurationProperties(prefix = "betahouse.redis.shiro")
     public RedisManager redisManager() {
         return new RedisManager();
     }

@@ -19,7 +19,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 public class LoginRealm extends AuthorizingRealm {
 
     /**
-     * 用于登陆鉴定
+     * 用于登陆鉴权
      * @param principalCollection
      * @return
      */
@@ -28,6 +28,12 @@ public class LoginRealm extends AuthorizingRealm {
         return null;
     }
 
+    /**
+     * 用于登录认证
+     * @param authenticationToken
+     * @return
+     * @throws AuthenticationException
+     */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         return null;

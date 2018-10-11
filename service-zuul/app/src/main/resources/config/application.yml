@@ -18,6 +18,7 @@ spring:
     show-sql: false
   banner:
     location: config/banner.txt
+betahouse:
   redis:
     shiro:
       host: localhost
