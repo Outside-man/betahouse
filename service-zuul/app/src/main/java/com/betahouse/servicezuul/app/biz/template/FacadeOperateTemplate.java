@@ -4,11 +4,11 @@
  */
 package com.betahouse.servicezuul.app.biz.template;
 
-import com.betahouse.servicezuul.app.common.logger.LoggerUtil;
 import enums.CommonResultCode;
 import exceptions.BetahouseException;
 import model.result.Result;
 import org.slf4j.Logger;
+import utils.LoggerUtil;
 
 import java.text.MessageFormat;
 

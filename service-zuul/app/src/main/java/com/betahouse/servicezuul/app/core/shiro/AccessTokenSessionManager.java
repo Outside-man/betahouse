@@ -4,12 +4,12 @@
  */
 package com.betahouse.servicezuul.app.core.shiro;
 
-import com.betahouse.servicezuul.app.common.logger.LoggerUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.LoggerUtil;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

@@ -12,7 +12,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 /**
- * 登陆规则
+ * 登陆领域
  * @author dango.yxm
  * @version : LoginRealm.java 2018/10/04 下午11:17 dango.yxm
  */

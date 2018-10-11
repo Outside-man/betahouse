@@ -2,7 +2,7 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.servicezuul.app.common.logger;
+package utils;
 
 import exceptions.BetahouseException;
 import org.apache.commons.lang.StringUtils;
