@@ -27,6 +27,8 @@ betahouse:
       password:
 logging:
   config: classpath:config/logback.xml
+zuul:
+  servlet-path: /
 #zuul:
 #  routes:
 #    api-a:
