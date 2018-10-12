@@ -27,6 +27,9 @@ betahouse:
       password:
 logging:
   config: classpath:config/logback.xml
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
 zuul:
   servlet-path: /
 #zuul:

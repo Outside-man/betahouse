@@ -1,14 +1,16 @@
-package com.betahouse.servicezuul.app.core.gateway.manager;
+package com.betahouse.serviceuser.app;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-/**
- * @author dango.yxm
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserManagerTest {
+public class ServiceUserAppApplicationTests {
+
+    @Test
+    public void contextLoads() {
+    }
 
 }

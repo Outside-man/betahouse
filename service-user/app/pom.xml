@@ -4,12 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.betahouse</groupId>
-    <artifactId>service-zuul-app</artifactId>
+    <artifactId>service-user-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>src/main/java/com/betahouse/serviceuser/app/common/service/facade</module>
+    </modules>
     <packaging>jar</packaging>
 
-    <name>service-zuul-app</name>
-    <description>betahouse gateway</description>
+    <name>service-user-app</name>
+    <description>user manager module</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,7 +26,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <log4j2.version>2.6.2</log4j2.version>
     </properties>
 
     <dependencies>
@@ -31,14 +33,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -60,34 +59,15 @@
             <version>1.0.16</version>
         </dependency>
 
-        <!--shiro-spring-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.crazycake</groupId>
-            <artifactId>shiro-redis</artifactId>
-            <version>2.4.2.1-RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>com.betahouse</groupId>
-            <artifactId>util</artifactId>
+            <artifactId>service-user-facade</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.betahouse</groupId>
-            <artifactId>service-user-facade</artifactId>
+            <artifactId>util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
