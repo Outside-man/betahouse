@@ -2,7 +2,7 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.servicezuul.app.core.gateway.dao.service;
+package com.betahouse.servicezuul.app.common.dao.service;
 
 
 import com.betahouse.servicezuul.app.core.gateway.model.UserBO;

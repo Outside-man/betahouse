@@ -4,8 +4,8 @@
  */
 package com.betahouse.servicezuul.app.core.gateway.validate;
 
-import com.betahouse.servicezuul.app.core.gateway.dao.model.UserDO;
-import com.betahouse.servicezuul.app.core.gateway.dao.repo.UserRepo;
+import com.betahouse.servicezuul.app.common.dao.model.UserDO;
+import com.betahouse.servicezuul.app.common.dao.repo.UserRepo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import model.request.UserRegisterRequest;

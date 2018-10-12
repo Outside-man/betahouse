@@ -4,7 +4,7 @@
  */
 package com.betahouse.servicezuul.app.core.gateway.util;
 
-import com.betahouse.servicezuul.app.core.gateway.dao.model.UserDO;
+import com.betahouse.servicezuul.app.common.dao.model.UserDO;
 import com.betahouse.servicezuul.app.core.gateway.model.UserBO;
 import model.UserDTO;
 

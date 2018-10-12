@@ -15,7 +15,10 @@ import model.result.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import service.UserManagerFacade;
 import utils.AssertUtil;
 
@@ -25,7 +28,8 @@ import utils.AssertUtil;
  * @author dango.yxm
  * @version : UserManagerFacadeImpl.java 2018/10/06 下午2:09 dango.yxm
  */
-@Service
+@RestController
+@RequestMapping(value = "/zuul")
 public class UserManagerFacadeImpl implements UserManagerFacade {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(UserManagerFacadeImpl.class);
@@ -34,7 +38,8 @@ public class UserManagerFacadeImpl implements UserManagerFacade {
     private UserManager userManager;
 
     @Override
-    public Result<UserDTO> register(UserRegisterRequest request) {
+    @GetMapping("/reg")
+    public Result<UserDTO> register(@RequestBody UserRegisterRequest request) {
         return FacadeOperateTemplate.operate(LOGGER, "注册用户", request, new OperateCallBack<UserDTO>() {
 
             @Override

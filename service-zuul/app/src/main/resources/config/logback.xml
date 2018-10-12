@@ -59,6 +59,18 @@
         </encoder>
     </appender>
 
+    <!-- 网关过滤器日志 -->
+    <appender name="ZUUL-FILTER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/zuul/zuul-filter.log
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <!--======================================模块日志======================================-->
     <!-- biz日志 -->
     <appender name="ZUUL-BIZ" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -88,6 +100,15 @@
         <appender-ref ref="COMMON-ERROR"/>
         <appender-ref ref="ZUUL-BIZ"/>
     </logger>
+
+    <logger name="ZUUL_FILTER" level="info">
+        <!-- 控制台输出 -->
+        <appender-ref ref="STDOUT"/>
+        <!-- 文件输出 -->
+        <appender-ref ref="COMMON-ERROR"/>
+        <appender-ref ref="ZUUL-FILTER"/>
+    </logger>
+
 
 
 </configuration>

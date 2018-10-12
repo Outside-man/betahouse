@@ -4,7 +4,7 @@
  */
 package com.betahouse.servicezuul.app.core.gateway.manager.impl;
 
-import com.betahouse.servicezuul.app.core.gateway.dao.service.UserService;
+import com.betahouse.servicezuul.app.common.dao.service.UserService;
 import com.betahouse.servicezuul.app.core.gateway.manager.UserManager;
 import com.betahouse.servicezuul.app.core.gateway.model.UserBO;
 import org.springframework.beans.factory.annotation.Autowired;

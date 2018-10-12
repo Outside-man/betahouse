@@ -45,9 +45,11 @@ public class ShiroConfig {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
         //注意过滤器配置顺序 不能颠倒 顺序判断
         filterChainDefinitionMap.put("/druid/**", FilterTypeEnum.ANONYMOUS.getCode());
-        filterChainDefinitionMap.put("/ajaxLogin", FilterTypeEnum.ANONYMOUS.getCode());
-        filterChainDefinitionMap.put("/login", FilterTypeEnum.ANONYMOUS.getCode());
-        filterChainDefinitionMap.put("/common", FilterTypeEnum.ANONYMOUS.getCode());
+        filterChainDefinitionMap.put("/login/**", FilterTypeEnum.ANONYMOUS.getCode());
+        filterChainDefinitionMap.put("/common/**", FilterTypeEnum.ANONYMOUS.getCode());
+        filterChainDefinitionMap.put("/zuul/**", FilterTypeEnum.ANONYMOUS.getCode());
+        filterChainDefinitionMap.put("/actuator/**", FilterTypeEnum.ANONYMOUS.getCode());
+        filterChainDefinitionMap.put("/error/**", FilterTypeEnum.ANONYMOUS.getCode());
         filterChainDefinitionMap.put("/**", "authc");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);

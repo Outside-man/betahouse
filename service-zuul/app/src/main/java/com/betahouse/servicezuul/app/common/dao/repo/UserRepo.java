@@ -2,9 +2,9 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.servicezuul.app.core.gateway.dao.repo;
+package com.betahouse.servicezuul.app.common.dao.repo;
 
-import com.betahouse.servicezuul.app.core.gateway.dao.model.UserDO;
+import com.betahouse.servicezuul.app.common.dao.model.UserDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

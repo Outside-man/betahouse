@@ -2,7 +2,7 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.servicezuul.app.core.gateway.dao.model;
+package com.betahouse.servicezuul.app.common.dao.model;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;

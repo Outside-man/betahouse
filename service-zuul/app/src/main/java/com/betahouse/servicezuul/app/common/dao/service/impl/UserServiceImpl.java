@@ -2,11 +2,11 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.servicezuul.app.core.gateway.dao.service.impl;
+package com.betahouse.servicezuul.app.common.dao.service.impl;
 
-import com.betahouse.servicezuul.app.core.gateway.dao.model.UserDO;
-import com.betahouse.servicezuul.app.core.gateway.dao.repo.UserRepo;
-import com.betahouse.servicezuul.app.core.gateway.dao.service.UserService;
+import com.betahouse.servicezuul.app.common.dao.model.UserDO;
+import com.betahouse.servicezuul.app.common.dao.repo.UserRepo;
+import com.betahouse.servicezuul.app.common.dao.service.UserService;
 import com.betahouse.servicezuul.app.core.gateway.model.UserBO;
 import com.betahouse.servicezuul.app.core.gateway.util.UserConverter;
 import com.betahouse.servicezuul.app.core.idfactory.BizIdFactory;
