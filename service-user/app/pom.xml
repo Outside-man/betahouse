@@ -60,6 +60,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>com.betahouse</groupId>
             <artifactId>service-user-facade</artifactId>
             <version>0.0.1-SNAPSHOT</version>
