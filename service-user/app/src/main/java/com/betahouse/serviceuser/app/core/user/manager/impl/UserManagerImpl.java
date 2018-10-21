@@ -2,11 +2,11 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.serviceuser.app.core.gateway.manager.impl;
+package com.betahouse.serviceuser.app.core.user.manager.impl;
 
 import com.betahouse.serviceuser.app.common.dao.service.UserService;
-import com.betahouse.serviceuser.app.core.gateway.manager.UserManager;
-import com.betahouse.serviceuser.app.core.gateway.model.UserBO;
+import com.betahouse.serviceuser.app.core.user.manager.UserManager;
+import com.betahouse.serviceuser.app.core.user.model.UserBO;
 import model.request.UserRegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,16 +24,17 @@ public class UserManagerImpl implements UserManager {
     private UserService userService;
 
     @Autowired
-    private MultiValidator userRegisterValidator;
+    private MultiValidator<UserBO> userRegisterValidator;
 
     @Override
     public UserBO register(UserRegisterRequest registerRequest) {
-        // 请求校验
-        userRegisterValidator.validate(registerRequest);
-        // 插入实体
+        // 组装领域模型
         UserBO userBO = new UserBO();
         userBO.setUsername(registerRequest.getUsername());
         userBO.setPassword(registerRequest.getPassword());
+        // 验证实体
+        userRegisterValidator.validate(userBO);
+        // 插入实体
         userBO.setSalt("1");
         return userService.insertUser(userBO);
     }

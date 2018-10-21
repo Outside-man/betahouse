@@ -5,7 +5,7 @@
 package com.betahouse.serviceuser.app.common.dao.service;
 
 
-import com.betahouse.serviceuser.app.core.gateway.model.UserBO;
+import com.betahouse.serviceuser.app.core.user.model.UserBO;
 
 /**
  * 用户服务

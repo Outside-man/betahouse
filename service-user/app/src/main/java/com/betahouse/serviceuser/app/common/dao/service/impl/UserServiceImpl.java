@@ -7,8 +7,8 @@ package com.betahouse.serviceuser.app.common.dao.service.impl;
 import com.betahouse.serviceuser.app.common.dao.model.UserDO;
 import com.betahouse.serviceuser.app.common.dao.repo.UserRepo;
 import com.betahouse.serviceuser.app.common.dao.service.UserService;
-import com.betahouse.serviceuser.app.core.gateway.model.UserBO;
-import com.betahouse.serviceuser.app.core.gateway.util.UserConverter;
+import com.betahouse.serviceuser.app.core.user.model.UserBO;
+import com.betahouse.serviceuser.app.core.user.util.UserConverter;
 import com.betahouse.serviceuser.app.core.idfactory.BizIdFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,8 +37,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserBO insertUser(UserBO userBO) {
         UserDO userDO = covert(userBO);
-        userDO.setUserId(bizIdFactory.getUserId());
         AssertUtil.assertNotNull(userDO, "不能存储空用户实体");
+        userDO.setUserId(bizIdFactory.getUserId());
         userRepo.save(userDO);
         return covert(userDO);
     }

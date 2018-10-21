@@ -6,8 +6,8 @@ package com.betahouse.serviceuser.app.biz.facadeimpl;
 
 import com.betahouse.serviceuser.app.biz.template.RestOperateCallBack;
 import com.betahouse.serviceuser.app.biz.template.RestOperateTemplate;
-import com.betahouse.serviceuser.app.core.gateway.manager.UserManager;
-import com.betahouse.serviceuser.app.core.gateway.util.UserConverter;
+import com.betahouse.serviceuser.app.core.user.manager.UserManager;
+import com.betahouse.serviceuser.app.core.user.util.UserConverter;
 import enums.CommonResultCode;
 import model.UserDTO;
 import model.request.UserRegisterRequest;

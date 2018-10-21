@@ -50,6 +50,17 @@ public class AssertUtil {
      * 断言对象不等于null
      *
      * @param obj
+     */
+    public static void assertNotNull(Object obj) {
+        if (obj == null) {
+            throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS);
+        }
+    }
+
+    /**
+     * 断言对象不等于null
+     *
+     * @param obj
      * @param errorMsg
      */
     public static void assertNotNull(Object obj, String errorMsg) {
@@ -71,6 +82,17 @@ public class AssertUtil {
     }
 
     /**
+     * 断言字符串不为空串
+     *
+     * @param str
+     */
+    public static void assertStringNotBlank(String str) {
+        if (StringUtils.isBlank(str)) {
+            throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS);
+        }
+    }
+
+    /**
      * 断言字符串为空串
      *
      * @param str
@@ -81,4 +103,7 @@ public class AssertUtil {
             throw new BetahouseException(CommonResultCode.ILLEGAL_PARAMETERS.getErrorCode(), errorMsg);
         }
     }
+
+    public static void assertEquals(){}
+
 }

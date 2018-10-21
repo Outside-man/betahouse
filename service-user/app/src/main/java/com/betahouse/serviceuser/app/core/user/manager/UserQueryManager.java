@@ -2,10 +2,10 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.serviceuser.app.core.gateway.manager;
+package com.betahouse.serviceuser.app.core.user.manager;
 
 
-import com.betahouse.serviceuser.app.core.gateway.model.UserBO;
+import com.betahouse.serviceuser.app.core.user.model.UserBO;
 
 /**
  * 用户查询管理

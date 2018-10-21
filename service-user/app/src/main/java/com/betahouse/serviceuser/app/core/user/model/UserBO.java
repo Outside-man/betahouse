@@ -2,7 +2,7 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.serviceuser.app.core.gateway.model;
+package com.betahouse.serviceuser.app.core.user.model;
 
 
 import common.ToString;

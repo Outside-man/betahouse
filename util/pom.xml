@@ -18,10 +18,17 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
+        <!--logback-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
+        </dependency>
+        <!--jnuit-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
     </dependencies>
 

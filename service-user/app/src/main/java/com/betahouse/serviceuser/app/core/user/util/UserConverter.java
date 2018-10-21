@@ -2,10 +2,10 @@
  * betahouse.us
  * CopyRight (c) 2012 - 2018
  */
-package com.betahouse.serviceuser.app.core.gateway.util;
+package com.betahouse.serviceuser.app.core.user.util;
 
 import com.betahouse.serviceuser.app.common.dao.model.UserDO;
-import com.betahouse.serviceuser.app.core.gateway.model.UserBO;
+import com.betahouse.serviceuser.app.core.user.model.UserBO;
 import model.UserDTO;
 
 /**

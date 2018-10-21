@@ -36,7 +36,7 @@ public class UserDO implements Serializable {
     /**
      * userId 生成 不可修改
      */
-    @Column(name = "user_id", updatable = false)
+    @Column(name = "user_id", updatable = false, unique = true)
     private String userId;
 
     /**
