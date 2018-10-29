@@ -6,17 +6,20 @@ package com.betahouse.serviceuser.app.common.dao.model;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * 用户账户
+ *
  * @author dango.yxm
  * @version : UserDO.java 2018/10/05 上午10:46 dango.yxm
  */
 @Entity
 @Table(name = "common_user")
+@EntityListeners(AuditingEntityListener.class)
 public class UserDO implements Serializable {
 
     private static final long serialVersionUID = 1660907732049201911L;
@@ -56,28 +59,24 @@ public class UserDO implements Serializable {
      */
     private String salt;
 
+    /**
+     * 上次登录时间
+     */
+    @Column(length = 20)
+    private Long lastLoginDate;
+
+    /**
+     * 上次登录ip
+     */
+    @Column(length = 32)
+    private String lastLoginIP;
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getGmtCreate() {
-        return gmtCreate;
-    }
-
-    public void setGmtCreate(Long gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public Long getGmtModified() {
-        return gmtModified;
-    }
-
-    public void setGmtModified(Long gmtModified) {
-        this.gmtModified = gmtModified;
     }
 
     public String getUserId() {
@@ -110,5 +109,37 @@ public class UserDO implements Serializable {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public Long getGmtCreate() {
+        return gmtCreate;
+    }
+
+    public void setGmtCreate(Long gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
+
+    public Long getGmtModified() {
+        return gmtModified;
+    }
+
+    public void setGmtModified(Long gmtModified) {
+        this.gmtModified = gmtModified;
+    }
+
+    public Long getLastLoginDate() {
+        return lastLoginDate;
+    }
+
+    public void setLastLoginDate(Long lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
+    }
+
+    public String getLastLoginIP() {
+        return lastLoginIP;
+    }
+
+    public void setLastLoginIP(String lastLoginIP) {
+        this.lastLoginIP = lastLoginIP;
     }
 }
