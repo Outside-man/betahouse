@@ -6,6 +6,7 @@ import model.request.UserRegisterRequest;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
@@ -25,7 +26,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class UserManagerTest {
 
-    //    @Autowired
+    @Autowired
     private UserManager userManager;
 
     private UserService mockUserService;
